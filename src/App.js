@@ -1,26 +1,34 @@
-import logo from './logo.svg';
-import Headers from './components/Headers';
-import './App.css';
+import React, { useEffect } from "react";
+import { Route, Switch } from "react-router-dom";
+
+import AOS from "aos";
+
+import Landing from "./pages/Landing";
+import About from "./pages/About";
+import Work from "./pages/Work";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 700,
+      easing: "ease-out-cubic",
+    });
+  });
+
   return (
-    <div className="App">
-      <Headers />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Switch>
+        <Route exact path="/">
+          <Landing />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/work">
+          <Work />
+        </Route>
+      </Switch>
+    </>
   );
 }
 
