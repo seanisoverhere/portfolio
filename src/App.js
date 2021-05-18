@@ -7,13 +7,15 @@ import Landing from "./pages/Landing";
 import About from "./pages/About";
 import Work from "./pages/Work";
 
+import 'aos/dist/aos.css';
+
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 700,
-      easing: "ease-out-cubic",
+      duration: 1000,
+      easing: "ease-out-cublc",
     });
-  });
+  }, []);
 
   return (
     <>
