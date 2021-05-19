@@ -24,13 +24,13 @@ const Landing = () => {
               data-aos-delay="250"
             ></div>
           </div>
-          <div className="flex justify-between w-1/5 text-white text-5xl" data-aos="fade-right" data-aos-delay="350">
-            <div className="flex-initial hover:text-purple-300">
+          <div className="flex justify-between w-1/5 text-white text-5xl" data-aos="fade-right" data-aos-delay="400">
+            <div className="flex-initial transition duration-400 ease-in-out transform hover:text-purple-300 hover:scale-110">
               <a href="https://github.com/seanisoverhere" target="_blank" rel="noreferrer">
                 <FaGithubSquare />
               </a>
             </div>
-            <div className="flex-initial hover:text-purple-300">
+            <div className="flex-initial transition duration-400 ease-in-out transform hover:text-purple-300 hover:scale-110">
               <a href="https://www.linkedin.com/in/sean-choon-3868a6137/" target="_blank" rel="noreferrer">
                 <FaLinkedin />
               </a>
